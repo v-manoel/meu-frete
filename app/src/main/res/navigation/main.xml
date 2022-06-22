@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/lastTrips">
+
+    <fragment
+        android:id="@+id/favPlaces"
+        android:name="com.example.meufrete.FavPlaces"
+        android:label="Favorite Places"
+        tools:layout="@layout/fragment_fav_places" />
+    <fragment
+        android:id="@+id/lastTrips"
+        android:name="com.example.meufrete.TripHistory"
+        android:label="Trips History"
+        tools:layout="@layout/fragment_trip_history" />
+</navigation>
