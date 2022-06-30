@@ -1,11 +1,16 @@
 package com.example.meufrete;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,10 +19,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.meufrete.dao.FavPlaceDao;
 import com.example.meufrete.model.FavPlaceValue;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,9 +36,10 @@ import java.util.Locale;
  * Use the {@link FavPlaces#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FavPlaces extends Fragment {
+public class FavPlaces extends Fragment implements PlaceCardAdapter.ItemClickListener {
     private View rootView;
     private PlaceCardAdapter placeCardAdapter;
+    private FloatingActionButton newPlaceBtn;
     RecyclerView recyclerView;
 
 
@@ -74,6 +82,8 @@ public class FavPlaces extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
@@ -96,9 +106,25 @@ public class FavPlaces extends Fragment {
 //            cardDesc.setText(yourAddress.getAddress().getThoroughfare() + " - " + yourAddress.getAddress().getSubAdminArea());
 //            cardTitle.setText(yourAddress.getAlias());
 //        }
+
+        
+        newPlaceBtn = (FloatingActionButton ) rootView.findViewById(R.id.floating_action_button);
+        newPlaceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Fragment fragment = RegisterFavPlaces.newInstance( );
+//                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                transaction.replace(R.id.navHostFragment, fragment, "new_favPlace_fragment");
+//                transaction.addToBackStack(null);
+//                transaction.commit();
+                NavController navController = Navigation.findNavController(getActivity(), R.id.navHostFragment);
+                navController.navigate(R.id.action_favPlaces_to_registerFavPlaces);
+            }
+        });
         this.setupRecycler();
         return rootView;
     }
+
 
     private void setupRecycler() {
 
@@ -116,12 +142,26 @@ public class FavPlaces extends Fragment {
         FavPlaceDao favPlaceDao = new FavPlaceDao(this.getContext());
         ArrayList<FavPlaceValue> favPlaceValues= (ArrayList<FavPlaceValue>) new ArrayList(favPlaceDao.all(this.getContext()));
         favPlaceDao.close();
-        placeCardAdapter = new PlaceCardAdapter(favPlaceValues);
+        placeCardAdapter = new PlaceCardAdapter(favPlaceValues, this);
         recyclerView.setAdapter(placeCardAdapter);
+
+
 
         // Configurando um dividr entre linhas, para uma melhor visualização.
 //        recyclerView.addItemDecoration(
 //                new DividerItemDecoration(this.getContext(), DividerItemDecoration.VERTICAL));
     }
 
+    @Override
+    public void onItemClick(FavPlaceValue favPlaceValue) {
+//        Fragment fragment = RegisterFavPlaces.newInstance(favPlaceValue);
+//        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.navHostFragment, fragment, "new_favPlace_fragment");
+//        transaction.addToBackStack(null);
+//        transaction.commit();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("FavPlaceValue",favPlaceValue);
+        NavController navController = Navigation.findNavController(getActivity(), R.id.navHostFragment);
+        navController.navigate(R.id.action_favPlaces_to_registerFavPlaces,bundle);
+    }
 }

@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-public class FavPlaceValue {
-    private Long id;
+public class FavPlaceValue implements java.io.Serializable {
+    private Long id = null;
     private String alias;
     private Address address;
 
@@ -56,11 +56,37 @@ public class FavPlaceValue {
         }
     }
 
+    public void setAddress(Context context, String placeName){
+        Geocoder geocoder = new Geocoder(context, Locale.getDefault());
+        try {
+            List<Address> addresses = geocoder.getFromLocationName(placeName,1);
+            if (addresses.size() > 0) {
+                this.address = addresses.get(0);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            this.address = null;
+        }
+    }
+
     public void setAddress(Address address) {
         this.address = address;
     }
 
     public String addrToString(){
         return this.address.getAddressLine(0)+ ", " +this.address.getLocality()+ " - " +this.address.getAdminArea();
+    }
+
+    public String prettyAddr(){
+        return this.address.getThoroughfare() + " - " + this.address.getSubAdminArea();
+    }
+
+    public String placeAddr(){
+        return this.address.getAddressLine(0);
+    }
+
+    @Override
+    public String toString() {
+        return alias;
     }
 }

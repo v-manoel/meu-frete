@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MeuFrete</string>
-    <string name="favorite">Favoritos</string>
-    <string name="search">Buscar</string>
-    <string name="more">Mais</string>
+    <string name="favorite">Locais Favoritos</string>
+    <string name="history">Últimas Viagens</string>
+    <string name="new_trip">Nova Viagem</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

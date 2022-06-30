@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/new_trip"
+        android:title="@string/new_trip" />
+
+    <item
         android:id="@+id/favPlaces"
         android:icon="@drawable/ic_star"
         android:title="@string/favorite" />
@@ -10,7 +14,7 @@
     <item
         android:id="@+id/lastTrips"
         android:icon="@drawable/ic_history"
-        android:title="@string/search" />
+        android:title="@string/history" />
 
     <item
         android:id="@+id/logout"

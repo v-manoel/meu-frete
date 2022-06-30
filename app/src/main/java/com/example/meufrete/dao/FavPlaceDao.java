@@ -17,7 +17,7 @@ public class FavPlaceDao extends DatabaseManager{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String ddl="CREATE TABLE " + this.tableName + " (id INTEGER PRIMARY KEY, name TEXT, latitude DOUBLE NOT NULL, longitude DOUBLE NOT NULL);";
+        String ddl="CREATE TABLE " + this.tableName + " (id INTEGER PRIMARY KEY, name TEXT, latitude REAL NOT NULL, longitude REAL NOT NULL);";
         db.execSQL(ddl);
     }
 
