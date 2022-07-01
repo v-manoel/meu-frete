@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/new_trip"
-        android:name="com.example.meufrete.new_trip"
+        android:name="com.example.meufrete.NewTrip"
         android:label="fragment_new_trip"
         tools:layout="@layout/fragment_new_trip" >
         <action

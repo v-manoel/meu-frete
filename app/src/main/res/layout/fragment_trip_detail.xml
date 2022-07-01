@@ -5,21 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".TripDetail">
 
-    <!-- TODO: Update blank fragment layout -->
-
-
          <TextView
         android:id="@+id/testid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
+         />
 
         <TextView
         android:id="@+id/testid2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Teste" />
+         />
 
 
 </FrameLayout>

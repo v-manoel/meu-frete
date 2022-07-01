@@ -1,4 +1,4 @@
-package com.example.meufrete;
+package com.example.meufrete.adapter;
 
 import android.view.View;
 import android.widget.ImageButton;
@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.meufrete.R;
 import com.google.android.material.card.MaterialCardView;
 
 public class PlaceCardHolder extends RecyclerView.ViewHolder {

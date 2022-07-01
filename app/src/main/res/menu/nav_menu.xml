@@ -4,21 +4,21 @@
 
     <item
         android:id="@+id/new_trip"
-        android:title="@string/new_trip" />
+        android:title="@string/menu_item_newTrip" />
 
     <item
         android:id="@+id/favPlaces"
         android:icon="@drawable/ic_star"
-        android:title="@string/favorite" />
+        android:title="@string/menu_item_favPlaces" />
 
     <item
         android:id="@+id/lastTrips"
         android:icon="@drawable/ic_history"
-        android:title="@string/history" />
+        android:title="@string/menu_item_lastTrips" />
 
     <item
         android:id="@+id/logout"
         android:icon="@drawable/ic_exit"
-        android:title="Sair" />
+        android:title="@string/menu_item_exit" />
 
 </menu>

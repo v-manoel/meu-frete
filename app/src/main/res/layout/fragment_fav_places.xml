@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Locais Favoritos"
+        android:text="@string/menu_item_favPlaces"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -39,12 +39,12 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
         app:backgroundTint="@color/white"
-        android:contentDescription="Add Fav Place "
+        android:contentDescription="@string/floatbtn_favPlace"
         app:tint = "@color/white"
         app:borderWidth="2dp"
         android:src="@drawable/ic_add"
         android:backgroundTint="@color/blueapp"
 
-        />
+        tools:ignore="RtlHardcoded" />
 
 </FrameLayout>

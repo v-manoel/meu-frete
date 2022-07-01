@@ -2,6 +2,7 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -31,11 +32,12 @@
                 android:id="@+id/favPlace_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alias"
+                android:text="Alias Placeholder"
                 android:layout_weight="9"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <ImageButton
                 android:id="@+id/favPlace_delete"
@@ -45,7 +47,8 @@
                 android:background="@color/blueapp"
                 android:scaleX="1.2"
                 android:scaleY="1.2"
-                android:src="@drawable/ic_close" />
+                android:src="@drawable/ic_close"
+                android:contentDescription="@string/deletebtn" />
         </LinearLayout>
 
 
@@ -58,6 +61,7 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="12sp"
-            android:text="Address Description" />
+            android:text="Address Description Placeholder"
+            tools:ignore="HardcodedText" />
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>

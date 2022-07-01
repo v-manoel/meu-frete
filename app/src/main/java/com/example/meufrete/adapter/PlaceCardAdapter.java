@@ -1,28 +1,18 @@
-package com.example.meufrete;
+package com.example.meufrete.adapter;
 
 import android.annotation.SuppressLint;
-import android.location.Address;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.meufrete.R;
 import com.example.meufrete.dao.FavPlaceDao;
 import com.example.meufrete.model.FavPlaceValue;
 import com.google.android.material.snackbar.Snackbar;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PlaceCardAdapter extends RecyclerView.Adapter<PlaceCardHolder> {

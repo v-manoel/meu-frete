@@ -1,4 +1,4 @@
-package com.example.meufrete;
+package com.example.meufrete.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.meufrete.R;
 import com.example.meufrete.model.FavPlaceValue;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class PlaceListAdapter extends ArrayAdapter<FavPlaceValue> {
     private List<FavPlaceValue> favPlaceValues;
     public PlaceListAdapter(@NonNull Context context, @NonNull List<FavPlaceValue> favPlaceValues) {
         super(context, 0, favPlaceValues);
-        this.favPlaceValues = new ArrayList<FavPlaceValue>(favPlaceValues);
+        this.favPlaceValues = new ArrayList<>(favPlaceValues);
     }
 
     @NonNull

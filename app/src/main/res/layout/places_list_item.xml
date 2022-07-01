@@ -1,5 +1,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/blueapp"
@@ -10,7 +11,7 @@
         android:layout_height="30dp"
         android:src="@drawable/ic_star"
         android:layout_gravity="center_vertical"
-        />
+        android:contentDescription="@string/staricon_hint" />
 
 
     <TextView
@@ -23,7 +24,7 @@
         android:textColor="@color/white"
         android:textAppearance="?attr/textAppearanceSubtitle1"
         android:layout_gravity="center_vertical"
-        android:text="Teste"
-        />
+        android:text="Place Info Placeholder"
+        tools:ignore="HardcodedText" />
 
 </LinearLayout>
