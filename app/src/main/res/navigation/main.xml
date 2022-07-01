@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/lastTrips">
+
+    <fragment
+        android:id="@+id/favPlaces"
+        android:name="com.example.meufrete.FavPlaces"
+        android:label="Favorite Places"
+        tools:layout="@layout/fragment_fav_places" >
+        <action
+            android:id="@+id/action_favPlaces_to_registerFavPlaces"
+            app:destination="@id/registerFavPlaces"
+            app:popUpTo="@id/registerFavPlaces" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastTrips"
+        android:name="com.example.meufrete.TripHistory"
+        android:label="Trips History"
+        tools:layout="@layout/fragment_trip_history" />
+
+    <fragment
+        android:id="@+id/registerFavPlaces"
+        android:name="com.example.meufrete.RegisterFavPlaces"
+        android:label="Favorite Place Register"
+        tools:layout="@layout/fragment_register_fav_places" >
+        <action
+            android:id="@+id/action_registerFavPlaces_to_favPlaces"
+            app:destination="@id/favPlaces"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="favplacevalue"
+            app:argType="com.example.meufrete.model.FavPlaceValue"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/new_trip"
+        android:name="com.example.meufrete.NewTrip"
+        android:label="fragment_new_trip"
+        tools:layout="@layout/fragment_new_trip" >
+        <action
+            android:id="@+id/action_new_trip_to_tripDetail"
+            app:destination="@id/tripDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripDetail"
+        android:name="com.example.meufrete.TripDetail"
+        android:label="fragment_trip_detail"
+        tools:layout="@layout/fragment_trip_detail" >
+        <argument
+            android:name="originLocation"
+            app:argType="com.example.meufrete.model.FavPlaceValue"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="destinationLocation"
+            app:argType="com.example.meufrete.model.FavPlaceValue"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

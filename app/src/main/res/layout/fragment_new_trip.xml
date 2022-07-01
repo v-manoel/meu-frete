@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NewTrip"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueapp"
+        android:paddingVertical="8dp"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/favPlace_alias2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColorHint="@color/blueapp"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/blueapp"
+            app:hintEnabled="false"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:paddingHorizontal="24dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompletePlaceOrigin"
+                android:hint="@string/input_oriAddress"
+                android:textColorHint="@color/blueapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:padding="8dp"
+            />
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/favPlace_name2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColorHint="@color/blueapp"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/blueapp"
+            app:hintEnabled="false"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:paddingHorizontal="24dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompletePlaceDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:hint="@string/input_desAddress"
+                android:textColorHint="@color/blueapp"
+                android:inputType="text"
+                android:padding="8dp"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/newTripBtn"
+        android:textAlignment="center"
+        app:cornerRadius="100dp"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_item_newTrip"
+        app:backgroundTint="@color/blueapp"
+        android:textColor="@color/white"
+        app:elevation="4dp"
+        android:layout_marginBottom="14dp"
+        android:layout_gravity="bottom|center"
+        tools:ignore="MissingConstraints" />
+
+</FrameLayout>

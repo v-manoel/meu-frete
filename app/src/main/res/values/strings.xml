@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">MeuFrete</string>
+    <string name="app_name" translatable="false">MeuFrete</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="menu_item_favPlaces">Locais Favoritos</string>
+    <string name="menu_item_lastTrips">Últimas Viagens</string>
+    <string name="menu_item_exit">Sair</string>
+    <string name="menu_item_newTrip">Nova Viagem</string>
+    <string name="hint_alias">Apelido</string>
+    <string name="hint_address">Endereço</string>
+    <string name="btn_save">Salvar</string>
+    <string name="floatbtn_favPlace">Novo Local Favorito</string>
+    <string name="deletebtn">Deletar</string>
+    <string name="input_oriAddress">Endereço de Origem</string>
+    <string name="input_desAddress">Endereço de Destino</string>
+    <string name="permissionImg">"Imagem de Solicitação de Permissão "</string>
+    <string name="permissionReq">Você está aqui !</string>
+    <string name="permissionReqDesc">Permitir que sua localização seja compartilhada conosco.</string>
+    <string name="btn_perm">Permitir</string>
+    <string name="logo">logo</string>
+    <string name="menu_icon" translatable="false">Menu</string>
+    <string name="btn_edit">Editar</string>
+    <string name="staricon_hint">Icone de Favorito</string>
 </resources>

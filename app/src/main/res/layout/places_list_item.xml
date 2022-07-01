@@ -1,0 +1,30 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blueapp"
+    >
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_star"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/staricon_hint" />
+
+
+    <TextView
+        android:id="@+id/place_alias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:layout_gravity="center_vertical"
+        android:text="Place Info Placeholder"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
