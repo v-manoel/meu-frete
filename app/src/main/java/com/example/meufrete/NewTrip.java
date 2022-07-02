@@ -75,18 +75,15 @@ public class NewTrip extends Fragment {
                 if (location != null){
                     FavPlaceValue currentPlace = new FavPlaceValue();
                     currentPlace.setAddress(rootView.getContext(),location.getLatitude(),location.getLongitude());
-                    currentPlace.setAlias("Local Atual");
+                    currentPlace.setAlias(getString(R.string.current_place));
                     favPlaceValues.add(0,currentPlace);
                     favPlaceValues2.add(0,currentPlace);
-                    Log.i("myLocation", location.getLatitude() + " " + location.getLongitude());
-                }else{
-                    Log.i("myLocation","location is null");
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Log.i("myLocation", "Falha no listener");
+
             }
         }).addOnCompleteListener(new OnCompleteListener<Location>() {
             @Override

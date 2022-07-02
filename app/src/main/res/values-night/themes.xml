@@ -37,5 +37,8 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:background">@color/blueapp2</item>
     </style>
-
+    <style name="default_colors" parent="">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/tranparent</item>
+    </style>
 </resources>

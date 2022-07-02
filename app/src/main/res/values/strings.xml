@@ -20,4 +20,14 @@
     <string name="menu_icon" translatable="false">Menu</string>
     <string name="btn_edit">Editar</string>
     <string name="staricon_hint">Icone de Favorito</string>
+    <string name="trip_details">Detalhes da Viagem</string>
+    <string name="summary">Resumo</string>
+    <string name="input_vehicle">Selecione o Veículo</string>
+    <string name="tripDetail_description">Descrição da Carga</string>
+    <string name="options">Opções</string>
+    <string name="check_trip_twice">Ida e Volta</string>
+    <string name="check_empty_return">Retorno Vazio</string>
+    <string name="check_load_n_unload">Serviço de carga e descarga</string>
+    <string name="calculate_btn">Calcular</string>
+    <string name="current_place">Local Atual</string>
 </resources>
