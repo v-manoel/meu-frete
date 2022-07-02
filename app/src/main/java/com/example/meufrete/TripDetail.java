@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -18,11 +19,13 @@ import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.meufrete.adapter.PlaceListAdapter;
+import com.example.meufrete.adapter.VehicleListAdapter;
 import com.example.meufrete.dao.FavPlaceDao;
 import com.example.meufrete.model.FavPlaceValue;
+import com.example.meufrete.model.VehicleValue;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,11 +34,12 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class TripDetail extends Fragment {
     private AutoCompleteTextView autoCompleteDestination;
     private AutoCompleteTextView autoCompleteOrigin;
+    private AutoCompleteTextView autoCompleteVehicles;
+    private ArrayList<VehicleValue> vehicles = null;
     private CheckBox checkTripTwice;
     private CheckBox checkEmptyReturn;
     private CheckBox checkLoadNUnload;
@@ -54,6 +58,9 @@ public class TripDetail extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        NavController navController = Navigation.findNavController(requireActivity(), R.id.navHostFragment);
+        navController.navigate(R.id.action_tripDetail_to_splash);
     }
 
 
@@ -64,6 +71,7 @@ public class TripDetail extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_trip_detail, container, false);
         this.initViewComponents();
         this.checkPreferences();
+        this.loadVehiclesList();
         this.loadPlacesList();
 
         Button calculateBtn = rootView.findViewById(R.id.calculateBtn);
@@ -71,6 +79,7 @@ public class TripDetail extends Fragment {
             @Override
             public void onClick(View view) {
                 setPreferences();
+
             }
         });
 
@@ -88,6 +97,7 @@ public class TripDetail extends Fragment {
         //AutoComplete Selects
         autoCompleteOrigin = (AutoCompleteTextView) rootView.findViewById(R.id.autoCompletePlaceOrigin);
         autoCompleteDestination = (AutoCompleteTextView) rootView.findViewById(R.id.autoCompletePlaceDestination);
+        autoCompleteVehicles = (AutoCompleteTextView) rootView.findViewById(R.id.autoCompleteVehicles);
 
     }
 
@@ -103,6 +113,17 @@ public class TripDetail extends Fragment {
         prefsEditor.putBoolean("check_empty_return",this.checkEmptyReturn.isChecked());
         prefsEditor.putBoolean("check_load_n_unload",this.checkLoadNUnload.isChecked());
         prefsEditor.apply();
+    }
+
+    public void loadVehiclesList(){
+        getParentFragmentManager().setFragmentResultListener("vehicleApiResult", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                vehicles = (ArrayList<VehicleValue>) result.getSerializable("vehicles");
+                VehicleListAdapter adapter = new VehicleListAdapter(rootView.getContext(), vehicles);
+                autoCompleteVehicles.setAdapter(adapter);
+            }
+        });
     }
 
     @SuppressLint("MissingPermission")

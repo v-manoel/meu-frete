@@ -30,4 +30,5 @@
     <string name="check_load_n_unload">Serviço de carga e descarga</string>
     <string name="calculate_btn">Calcular</string>
     <string name="current_place">Local Atual</string>
+    <string name="api_progress_bar">Carregandos dados da API</string>
 </resources>

@@ -1,0 +1,24 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blueapp"
+    >
+
+
+
+    <TextView
+        android:id="@+id/vehicle_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:layout_gravity="center_vertical"
+        android:text="Vehicle Info Placeholder"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

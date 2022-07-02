@@ -60,5 +60,14 @@
             app:argType="com.example.meufrete.model.FavPlaceValue"
             app:nullable="true"
             android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_tripDetail_to_splash"
+            app:destination="@id/splash"
+            app:popUpTo="@id/tripDetail" />
     </fragment>
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.example.meufrete.Splash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
 </navigation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_item_exit">Sair</string>
+    <string name="menu_item_favPlaces">Favourite Places</string>
+    <string name="menu_item_lastTrips">Last Trips</string>
+    <string name="menu_item_newTrip">New Trip</string>
+    <string name="hint_alias">Alias</string>
+    <string name="hint_address">Address</string>
+    <string name="btn_save">Save</string>
+    <string name="floatbtn_favPlace">New Favourite Place</string>
+    <string name="deletebtn">Delete</string>
+    <string name="input_oriAddress">Origin Address</string>
+    <string name="input_desAddress">Destiny Address</string>
+    <string name="permissionImg">Permission Request Image</string>
+    <string name="permissionReq">You are here !</string>
+    <string name="permissionReqDesc">Allow your location to be shared with us.</string>
+    <string name="btn_perm">Allow</string>
+    <string name="logo">brand</string>
+    <string name="btn_edit">Edit</string>
+    <string name="staricon_hint">Favourite star icon</string>
+    <string name="trip_details">Trip Details</string>
+    <string name="summary">Summary</string>
+    <string name="input_vehicle">Vehicle Selection</string>
+    <string name="tripDetail_description">Cargo Description</string>
+    <string name="options">Options</string>
+    <string name="check_load_n_unload">Loading and unloading service</string>
+    <string name="check_trip_twice">Round trip</string>
+    <string name="check_empty_return">Empty return</string>
+    <string name="calculate_btn">Calculate</string>
+    <string name="current_place">Current Place</string>
+    <string name="api_progress_bar">Loading API Data</string>
+</resources>
