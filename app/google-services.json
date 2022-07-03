@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "50941400172",
+    "project_id": "meufrete-b7d93",
+    "storage_bucket": "meufrete-b7d93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50941400172:android:6db78f4861a0ea3c0ff449",
+        "android_client_info": {
+          "package_name": "com.example.meufrete"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50941400172-scgjnc2nu1g85nimqgmi1su6mt0m70tk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASazv7iw7AnEcwmUHr8YsJ0586f0fNFyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50941400172-scgjnc2nu1g85nimqgmi1su6mt0m70tk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

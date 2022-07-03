@@ -34,6 +34,7 @@ import java.util.Map;
 
 public class Splash extends Fragment {
     private View rootView;
+    private final String API_Url = "http://10.0.1.2:3000/vehicles";
 
     public Splash() {
         // Required empty public constructor
@@ -61,7 +62,7 @@ public class Splash extends Fragment {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                new JSONAsyncTask().execute("http://10.0.1.2:3000/vehicles");
+                new JSONAsyncTask().execute(API_Url);
             }
         }, SPLASH_TIME_OUT);
 

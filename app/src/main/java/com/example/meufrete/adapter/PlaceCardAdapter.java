@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.meufrete.R;
 import com.example.meufrete.dao.FavPlaceDao;
+import com.example.meufrete.model.AnalyticsHandler;
 import com.example.meufrete.model.FavPlaceValue;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -74,6 +75,7 @@ public class PlaceCardAdapter extends RecyclerView.Adapter<PlaceCardHolder> {
             public void onClick(View v) {
                 FavPlaceDao favPlaceDao = new FavPlaceDao(v.getContext());
                 favPlaceDao.delete(favPlaces.get(position));
+                AnalyticsHandler.getInstance(v.getContext()).customEvent(AnalyticsHandler.DATABASE_INSERT,"Place","FavPlace: " + favPlaces.get(position).getAlias());
                 favPlaces.remove(position);
                 notifyItemRemoved(position);
                 notifyItemRangeRemoved(position, favPlaces.size());

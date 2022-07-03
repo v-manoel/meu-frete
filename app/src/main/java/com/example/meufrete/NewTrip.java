@@ -18,6 +18,7 @@ import android.widget.Button;
 
 import com.example.meufrete.adapter.PlaceListAdapter;
 import com.example.meufrete.dao.FavPlaceDao;
+import com.example.meufrete.model.AnalyticsHandler;
 import com.example.meufrete.model.FavPlaceValue;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -25,6 +26,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 
@@ -108,6 +110,9 @@ public class NewTrip extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("originLocation",origin);
                 bundle.putSerializable("destinationLocation",destination);
+
+                AnalyticsHandler.getInstance(requireActivity()).customEvent(AnalyticsHandler.BTN_CLICKED,"New Trip", "Start a new Trip");
+
                 NavController navController = Navigation.findNavController(requireActivity(), R.id.navHostFragment);
                 navController.navigate(R.id.action_new_trip_to_tripDetail,bundle);
             }

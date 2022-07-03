@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.meufrete.dao.FavPlaceDao;
+import com.example.meufrete.model.AnalyticsHandler;
 import com.example.meufrete.model.FavPlaceValue;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -69,10 +70,12 @@ public class RegisterFavPlaces extends Fragment {
                     favPlaceValue = new FavPlaceValue();
                     favPlaceValue.setAlias(Objects.requireNonNull(aliasInput.getEditText()).getText().toString());
                     favPlaceValue.setAddress(view.getContext() , Objects.requireNonNull(nameInput.getEditText()).getText().toString());
+                    AnalyticsHandler.getInstance(requireActivity()).customEvent(AnalyticsHandler.DATABASE_UPDATE,"Place","FavPlace: " + favPlaceValue.getAlias());
                     favPlaceDao.save(favPlaceValue);
                 }else{
                     favPlaceValue.setAlias(Objects.requireNonNull(aliasInput.getEditText()).getText().toString());
                     favPlaceValue.setAddress(view.getContext() , Objects.requireNonNull(nameInput.getEditText()).getText().toString());
+                    AnalyticsHandler.getInstance(requireActivity()).customEvent(AnalyticsHandler.DATABASE_INSERT,"Place","FavPlace: " + favPlaceValue.getAlias());
                     favPlaceDao.update(favPlaceValue);
                 }
                 favPlaceDao.close();

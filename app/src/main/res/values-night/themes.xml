@@ -4,8 +4,8 @@
         <!-- Primary brand color. -->
 
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/blueapp2</item>
-        <item name="colorPrimaryVariant">@color/blueapp2</item>
+        <item name="colorPrimary">@color/blueapp</item>
+        <item name="colorPrimaryVariant">@color/blueapp</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
