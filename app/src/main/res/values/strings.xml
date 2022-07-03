@@ -31,4 +31,6 @@
     <string name="calculate_btn">Calcular</string>
     <string name="current_place">Local Atual</string>
     <string name="api_progress_bar">Carregandos dados da API</string>
+    <string name="yes">Sim</string>
+    <string name="confirmDelete">Confirmar Exclusão de Registro ?</string>
 </resources>

@@ -69,8 +69,8 @@ public class PlaceCardAdapter extends RecyclerView.Adapter<PlaceCardHolder> {
 
     @SuppressLint("ResourceAsColor")
     private void removeItem(int position, View view) {
-        Snackbar snackbar = Snackbar.make(view, "Confirmar Exclusão de Registro ?", Snackbar.LENGTH_LONG);
-        snackbar.setAction("SIM", new View.OnClickListener() {
+        Snackbar snackbar = Snackbar.make(view, R.string.confirmDelete, Snackbar.LENGTH_LONG);
+        snackbar.setAction(R.string.yes, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FavPlaceDao favPlaceDao = new FavPlaceDao(v.getContext());

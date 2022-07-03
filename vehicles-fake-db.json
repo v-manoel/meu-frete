@@ -1,0 +1,66 @@
+{
+    "vehicles": [
+        {
+            "id": 1,
+            "brand": "Fiat",
+            "year": 2018,
+            "model": {
+                "name": "Strada",
+                "engine": "1.4",
+                "description": "Strada Hard Working 1.0 CS"
+            },
+            "gasType": "flex",
+            "gasCapacity": 58,
+            "consumption": {
+                "gas": 11.7,
+                "alchool": 7.9
+            }
+        },
+        {
+            "id": 2,
+            "brand": "Fiat",
+            "year": 2018,
+            "model": {
+                "name": "Toro",
+                "engine": "2.0",
+                "description": "Toro Volcano 2.0 Turbo AT 4x4"
+            },
+            "gasType": "diesel",
+            "gasCapacity": 60,
+            "consumption": {
+                "oil": 10.9
+            }
+        },
+        {
+            "id": 3,
+            "brand": "Chevrolet",
+            "year": 2019,
+            "model": {
+                "name": "S10",
+                "engine": "2.8",
+                "description": "S10 LT 2.8 Turbo 4x4 AT CD"
+            },
+            "gasType": "diesel",
+            "gasCapacity": 76,
+            "consumption": {
+                "oil": 9.4
+            }
+        },
+        {
+            "id": 4,
+            "brand": "Volkswagen",
+            "year": 2019,
+            "model": {
+                "name": "Saveiro",
+                "engine": "1.6",
+                "description": "Saveiro Trendline 1.6 CS"
+            },
+            "gasType": "flex",
+            "gasCapacity": 55,
+            "consumption": {
+                "gas": 11.2,
+                "alchool": 8.3
+            }
+        }
+    ]
+}

@@ -29,4 +29,6 @@
     <string name="calculate_btn">Calculate</string>
     <string name="current_place">Current Place</string>
     <string name="api_progress_bar">Loading API Data</string>
+    <string name="yes">Yes</string>
+    <string name="confirmDelete">Confirm Record Deletion ?</string>
 </resources>
