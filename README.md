@@ -50,7 +50,7 @@ O protótipo de baixa fidelidade foi construído nas etapas iniciais da elabora�
 
 ### Protótipo de Alta Fidelidade
 
-No protótipo de alta fidelidade a estilização e linha de design definidos são melhor detalhados. As iterações com a interface podem ser visualizados em [MeuFrete-Figma](https://www.figma.com/proto/pl53ioGJMqgvpU34g4ePt9/MoboFrete?node-id=4%3A4&scaling=scale-down&page-id=0%3A1).
+No protótipo de alta fidelidade a estilização e linha de design definidos são melhor detalhados. As iterações com a interface podem ser visualizados em [MeuFrete-Figma](https://www.figma.com/proto/Uhwi3jtcAggMoEP2ZFMLin/MoboFreteActions?scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A1591&node-id=1%3A1591).
 
 ![HighFidelityPrototype](doc/HighFidelityPrototype.png)
 

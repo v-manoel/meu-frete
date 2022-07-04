@@ -30,22 +30,21 @@ public class AnalyticsHandler {
 
     public void contentSelected(String id, String type){
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, type);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id.replaceAll("\\s","_"));
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, type.replaceAll("\\s","_"));
         analytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     public void itemSelected(String id, String name){
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_LIST_ID, id);
-        bundle.putString(FirebaseAnalytics.Param.ITEM_LIST_NAME, name);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_LIST_ID, id.replaceAll("\\s","_"));
+        bundle.putString(FirebaseAnalytics.Param.ITEM_LIST_NAME, name.replaceAll("\\s","_"));
         analytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     public void customEvent(String eventName ,String id, String value){
         Bundle bundle = new Bundle();
-        bundle.putString("key", id);
-        bundle.putString("value", value);
+        bundle.putString(id.replaceAll("\\s","_"),value.replaceAll("\\s","_"));
         analytics.logEvent(eventName, bundle);
     }
 }
